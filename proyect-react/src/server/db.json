@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": "a227"
+    },
+    {
+      "id": "22f8",
+      "nombre": "Eidrian",
+      "email": "eidrian@gmail.com",
+      "contrasenia": "12345"
+    },
+    {
+      "id": "49b3",
+      "nombre": "Alex",
+      "email": "Alex@gmail.com",
+      "contrasenia": "12345"
+    },
+    {
+      "id": "b4af",
+      "nombre": "Chrstian",
+      "email": "christian@gmail.com",
+      "contrasenia": "12345"
+    }
+  ],
+  "tareas": [
+    {
+      "id": "b67f"
+    }
+  ]
+}
