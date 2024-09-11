@@ -1,0 +1,39 @@
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+.headermiddle{
+border: #000 solid;
+width: 100%;
+height: 110px;
+
+
+}
+
+.middleContainer{
+width: 400px;
+display: flex;
+margin: 10px auto;
+justify-content: center;
+justify-content: space-between;
+border: #000 solid;
+}
+
+#navContainer{
+    width: 100%;
+    border: #000 solid;
+}
+
+.navegacion{
+    width: 400px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+li{
+    list-style: none;
+}

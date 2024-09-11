@@ -27,7 +27,7 @@ function FormLogin() {
     };
 
 
-  //ESTA FUNCION PUEDE CARGAR ,HACER POST O BIEN REALIZAR VALIDACIONES
+
   const cargar = async (e) => {
     e.preventDefault()
 
