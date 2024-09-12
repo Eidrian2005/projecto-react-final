@@ -1,0 +1,34 @@
+/* Header.css */
+
+.header {
+    width: 100%;
+    background-color: #333; /* Color de fondo del header */
+    padding: 10px 0; /* Espaciado arriba y abajo */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    background-color: #fff; /* Color de fondo del contenedor de búsqueda */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 5px 10px; /* Espaciado interno */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  }
+  
+  .search-input {
+    border: none; /* Sin borde */
+    outline: none; /* Sin borde cuando está enfocado */
+    padding: 8px 12px; /* Espaciado interno */
+    border-radius: 20px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de la fuente */
+    width: 200px; /* Ancho fijo del input */
+  }
+  
+  .search-icon {
+    margin-left: 8px; /* Espaciado entre el input y el icono */
+    color: #333; /* Color del icono */
+  }
+  

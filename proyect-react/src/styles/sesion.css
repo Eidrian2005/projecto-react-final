@@ -1,6 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-    
 }
 
 .container {
@@ -46,6 +45,3 @@ label {
     cursor: pointer;
 }
 
-button[type="submit"]:hover {
-    background-color: #23527c;
-}

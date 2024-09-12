@@ -5,7 +5,7 @@ import Register from '../pages/Register'
 import Home from '../pages/Home'
 import AboutUs from '../pages/AboutUs'
 import Contacts from '../pages/Contacts'
-
+import NewProducts from '../pages/admin/NewProducts';
 
 const Routing = () => {
 
@@ -13,6 +13,7 @@ return (
     <Router>
     <Routes>
         <Route path="/" element={<Home />} />
+        <Route path='/NewProducts' element={<NewProducts />} />
         <Route path='/AboutUs' element={<AboutUs />} />
         <Route path='/Contacts' element={<Contacts />} />
         <Route path="/Login" element={<Login />} />

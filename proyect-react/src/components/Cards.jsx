@@ -1,8 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react';
 
+import React from 'react';
 
 
 export default  function Cards() {
