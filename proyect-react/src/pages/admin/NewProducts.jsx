@@ -1,8 +1,8 @@
 import React from 'react'
-import AddProducts from '../../components/AddProducts'
+import BodyAdmin from '../../components/BodyAdmin'
 
 export default function NewProducts() {
   return (
-    <AddProducts />
+    <BodyAdmin />
   )
 }

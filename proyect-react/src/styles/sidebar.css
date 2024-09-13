@@ -1,10 +1,9 @@
 /* styles.css */
 .sidebar {
-    width: 250px; /* Ancho del sidebar */
+    width: 16vw; /* Ancho del sidebar */
     height: 100vh; /* Altura completa de la ventana */
     background-color: #f8f9fa; /* Color de fondo del sidebar */
     position: fixed; /* Fija el sidebar a la izquierda */
-    top: 0; /* Empieza desde el top de la ventana */
     left: 0; /* Empieza desde el left de la ventana */
     padding: 15px; /* Espaciado interno del sidebar */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
@@ -70,3 +69,5 @@
   background-color: transparent; /* Fondo transparente para el icono */
   border: none; /* Sin borde para el icono */
 }
+
+

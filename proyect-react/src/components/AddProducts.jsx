@@ -56,59 +56,55 @@ export default function AddProducts() {
   return (
 
 
-// <div id='contenedorPadre'>  
+<div id='contenedorPadre'>  
 
 <div>
-<Sidebar />
+        <img src="" alt="productos agregados" />
 </div>
 
-// <div>
-//         <img src="" alt="productos agregados" />
-// </div>
+<div className='Productos'>
+        <label htmlFor="Producto">Producto</label>
+        <input type="text"
+        name="Producto" 
+        id=""
+        onChange={cargaProducto}
+        />
+</div>
 
-// <div className='Productos'>
-//         <label htmlFor="Producto">Producto</label>
-//         <input type="text"
-//         name="Producto" 
-//         id=""
-//         onChange={cargaProducto}
-//         />
-// </div>
-
-// <div className='Descripcion'>
-//         <textarea 
-//         name="" 
-//         placeholder='Describa el Producto' 
-//         id="" 
-//         value={Descripcion}
-//         onChange={cargaDescripcion}
-//         > </textarea>
-// </div>
+<div className='Descripcion'>
+        <textarea 
+        name="" 
+        placeholder='Describa el Producto' 
+        id="" 
+        value={Descripcion}
+        onChange={cargaDescripcion}
+        > </textarea>
+</div>
 
 
-// <div className='Etiquetas'>
-// <input 
-//         type="text" 
-//         onChange={cargaEtiqueta}
-//         placeholder='Añada etiqueta'
-//         />
-// </div>
+<div className='Etiquetas'>
+<input 
+        type="text" 
+        onChange={cargaEtiqueta}
+        placeholder='Añada etiqueta'
+        />
+</div>
 
-// <div className='Precio'>
-//         <label htmlFor="price">Precio:</label>
-//         <input
-//           type="number"
-//           name="price"
-//           placeholder='Precio del producto'
-//           onChange={cargarPrecio}
-//         />
-// </div>  
+<div className='Precio'>
+        <label htmlFor="price">Precio:</label>
+        <input
+          type="number"
+          name="price"
+          placeholder='Precio del producto'
+          onChange={cargarPrecio}
+        />
+</div>  
 
 
-// <div>
-//         <button className='' onClick={agregarProducto}>Agregar Producto</button>
-// </div>
+<div>
+        <button className='' onClick={agregarProducto}>Agregar Producto</button>
+</div>
 
-//     </div>
+    </div>
   )
 }
