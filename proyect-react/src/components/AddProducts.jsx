@@ -6,6 +6,7 @@ import { toast } from 'react-toastify';
 import Sidebar from './Sidebar';
 
 
+
 export default function AddProducts() {
 
   const [Producto, setProducto] = useState('')
@@ -46,6 +47,8 @@ export default function AddProducts() {
     toast.success('Tarea agregada exitosamente',{
         autoClose: 1000
     })
+
+    
   }
   
 

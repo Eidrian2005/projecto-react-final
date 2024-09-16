@@ -4,7 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 import React from 'react';
 import AddProducts from './AddProducts';
 
-function ModalAdmin() {
+function ModalAdmin({ agregarProducto }) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -25,7 +25,7 @@ function ModalAdmin() {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={agregarProducto}>
             Save Changes
           </Button>
         </Modal.Footer>

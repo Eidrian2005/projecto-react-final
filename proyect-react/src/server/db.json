@@ -29,25 +29,25 @@
   ],
   "Productos": [
     {
-      "id": "1a7d"
-    },
-    {
-      "id": "7f9d",
-      "producto": "Champoo",
-      "descripcion": "Champoo revitalizador de cabello,acondicionador"
-    },
-    {
-      "id": "9f27",
-      "producto": "Champoo",
-      "descripcion": "Acondicionador Para el cabllo",
-      "etiqueta": "Acondicionador"
-    },
-    {
       "id": "e4e6",
       "producto": "Champoo",
       "descripcion": "si",
       "etiqueta": "champoo",
       "precio": "234234423"
+    },
+    {
+      "id": "4b8e",
+      "imagen": "fg",
+      "producto": "f",
+      "descripcion": "hfgh",
+      "etiqueta": "32"
+    },
+    {
+      "id": "725a",
+      "imagen": "gggggggg",
+      "producto": "gggggggg",
+      "descripcion": "ggggggggg",
+      "etiqueta": "4234"
     }
   ]
 }
