@@ -1,0 +1,15 @@
+/* headerAdmin.css */
+
+.contenedorAdmin{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.navbarAdmin{
+    /* flex: 1; */
+    /* display: flex;
+    justify-content: space-between; */
+    
+
+}

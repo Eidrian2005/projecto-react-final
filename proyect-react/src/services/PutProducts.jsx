@@ -1,10 +1,11 @@
-async function updateProducts(producto, descripcion,etiqueta ,id) {
+async function updateProducts(producto, descripcion,etiqueta,precio ,id) {
     try {
     
         const productsData = { 
-            producto, 
+            producto,
             descripcion,
-            etiqueta
+            etiqueta,
+            precio
         
         };
         const response = await fetch("http://localhost:3001/Productos/"+id, {

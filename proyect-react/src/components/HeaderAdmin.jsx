@@ -9,7 +9,8 @@ import '../styles/headerAdmin.css'
 
 function HeaderAdmin() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary mover">
+    <div className='navbarAdmin'>
+      <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
         <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -47,6 +48,7 @@ function HeaderAdmin() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    </div>
   );
 }
 
