@@ -19,11 +19,15 @@ function ModalAdmin({ agregarProducto }) {
   const [Descripcion, setDescripcion] = useState('')
   const [Etiquetas, setEtiqueta] = useState('')
   const [Precio, setPrecio] = useState('')
-
+  const [Imagen, setImagen] = useState(null)
 
 
   function cargaProducto(event) {
     setProducto(event.target.value)
+  }
+
+  function cargaImagen(event) {
+    setImagen(event.target.value)
   }
 
   function cargaDescripcion(event) {
@@ -60,7 +64,7 @@ function ModalAdmin({ agregarProducto }) {
 <Row>
 <Nav className="flex-column">
 <Nav.Item>
-<Button variant="outline-primary" className="w-50 mb-2" onClick={handleShow}>
+<Button variant="outline-primary" className="w-100 mb-2" onClick={handleShow}>
 <FontAwesomeIcon icon={faPlus} /> Añadir Productos
 </Button>
 </Nav.Item>
@@ -77,7 +81,13 @@ function ModalAdmin({ agregarProducto }) {
 <div id='contenedorPadre'>  
 
 <div>
-        <img src="" alt="productos agregados" />
+<label htmlFor="Img">Producto</label>
+        <input type="file"
+        name="Imagen" 
+        id=""
+        value={Imagen}
+        onChange={cargaImagen}
+        /> 
 </div>
 
 <div className='Productos'>

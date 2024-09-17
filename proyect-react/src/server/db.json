@@ -22,46 +22,5 @@
       "contrasenia": "12345"
     }
   ],
-  "tareas": [
-    {
-      "id": "b67f"
-    }
-  ],
-  "Productos": [
-    {
-      "id": "e4e6",
-      "producto": "Champoo",
-      "descripcion": "si",
-      "etiqueta": "champoo",
-      "precio": "234234423"
-    },
-    {
-      "id": "4b8e",
-      "imagen": "fg",
-      "producto": "f",
-      "descripcion": "hfgh",
-      "etiqueta": "32"
-    },
-    {
-      "id": "725a",
-      "imagen": "gggggggg",
-      "producto": "gggggggg",
-      "descripcion": "ggggggggg",
-      "etiqueta": "4234"
-    },
-    {
-      "id": "a7ba",
-      "imagen": "Champoo",
-      "producto": "hay un champoo",
-      "descripcion": "cosmeticos",
-      "etiqueta": "123456"
-    },
-    {
-      "id": "a981",
-      "producto": "YA",
-      "descripcion": "Funciona",
-      "etiqueta": "SIIIII",
-      "precio": "12312312313121"
-    }
-  ]
+  "Productos": []
 }

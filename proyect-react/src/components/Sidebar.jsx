@@ -12,27 +12,12 @@ const AdminDashboard = (agregarProductos) => {
 
   return (
     <>
-      <Container fluid>
-        <Row>
-          <Col xs={2} className="sidebar">
-            <Nav className="flex-column">
+            <Nav className='p-3'>
               <Nav.Item>
                   <ModalAdmin agregarProducto={agregarProductos}/>
               </Nav.Item>
-              <Nav.Item>
-                <Button variant="outline-danger" className="w-50 mb-2">
-                  <FontAwesomeIcon icon={faTrash} /> Eliminar Producto
-                </Button>
-              </Nav.Item>
-              <Nav.Item>
-                <Button variant="outline-warning" className="w-50">
-                  <FontAwesomeIcon icon={faEdit} /> Actualizar Product
-                </Button>
-              </Nav.Item>
             </Nav>
-          </Col>
-        </Row>
-      </Container>
+          
     </>
   );
 };
