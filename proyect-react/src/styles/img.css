@@ -1,0 +1,8 @@
+#imagen{
+    height: 70%;
+}
+
+#imagen img{
+    max-width: 235px;
+    height: 100%;
+}

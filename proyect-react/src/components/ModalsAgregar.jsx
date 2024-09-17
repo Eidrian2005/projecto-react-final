@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import { Container, Row, Col, Nav } from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal';
@@ -7,6 +7,7 @@ import { faPlus, faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { toast } from 'react-toastify';
 import {PostProducts} from '../services/PostProducts'
+import { GetProducts } from '../services/GetProducts';
 
 
 function ModalAdmin({ agregarProducto }) {
@@ -50,11 +51,20 @@ function ModalAdmin({ agregarProducto }) {
       
   } 
     PostProducts(Producto, Descripcion, Etiquetas, Precio)
-    window.location.reload()
     toast.success('Tarea agregada exitosamente',{
         autoClose: 1000
+        
     })
+    handleClose();
   }
+
+  const [products, setProducts] = useState([]);
+
+  
+
+  useEffect(() => {
+
+  }, []);
 
 
   return (

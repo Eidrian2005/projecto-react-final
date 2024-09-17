@@ -8,29 +8,34 @@ import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { deleteProducts } from '../services/DeleteProducts';
 import imgLinea from '../img/linea-nutritiva.webp' 
+import { toast } from 'react-toastify';
+import '../styles/img.css'
+
+
 
 
 export default function ShowProducts() {  
   const [productos, setProductos] = useState([]);
-
-
-
-  useEffect(() => {
-    async function fetchProductos() {
-      try {
-        const productsData = await GetProducts();
-        setProductos(productsData);
-      } catch (error) {
-        console.error('Error fetching products:', error);
-      }
+  
+  async function fetchProductos() {
+    try {
+      const productsData = await GetProducts();
+      setProductos(productsData);
+    } catch (error) {
+      console.error('Error fetching products:', error);
     }
+  }
 
-    fetchProductos();
-  }, []);
+  useEffect(() =>{
+    fetchProductos()
+  },[])
 
   async function eliminarProducto(id) {
     await deleteProducts(id)
-    window.location.reload()
+    fetchProductos();
+    toast.warning('Producto Eliminado exitosamente',{
+      autoClose: 1000
+  })
   }
   
 
@@ -40,7 +45,7 @@ export default function ShowProducts() {
         {productos.map((producto, index) => (
           <Col key={index} xs={12} sm={6} md={4} lg={3} className="mb-4">
             <Card>
-              <Card.Img variant="top" src={imgLinea} alt={producto.nombre} />
+              <Card.Img variant="top" src={imgLinea} alt={producto.nombre} id='imagen'/>
               <Card.Body>
                 <Card.Title>{producto.producto}</Card.Title>
                 <Card.Text>{producto.descripcion}</Card.Text>

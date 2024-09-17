@@ -22,5 +22,13 @@
       "contrasenia": "12345"
     }
   ],
-  "Productos": []
+  "Productos": [
+    {
+      "id": "b9d3",
+      "producto": "123",
+      "descripcion": "123",
+      "etiqueta": "123",
+      "precio": "133"
+    }
+  ]
 }
