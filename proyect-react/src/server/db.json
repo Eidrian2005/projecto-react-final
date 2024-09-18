@@ -24,11 +24,25 @@
   ],
   "Productos": [
     {
-      "id": "b9d3",
-      "producto": "123",
-      "descripcion": "123",
-      "etiqueta": "123",
-      "precio": "133"
+      "id": "1c82",
+      "producto": "hola",
+      "descripcion": "detalle",
+      "etiqueta": "jajaja",
+      "precio": "12345"
+    },
+    {
+      "id": "636a",
+      "producto": "Champoo",
+      "descripcion": "12345",
+      "etiqueta": "12345",
+      "precio": "12338"
+    },
+    {
+      "id": "cd0f",
+      "producto": "123456",
+      "descripcion": "12345",
+      "etiqueta": "14354",
+      "precio": "123225"
     }
   ]
 }

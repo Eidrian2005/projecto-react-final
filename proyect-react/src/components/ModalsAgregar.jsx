@@ -10,18 +10,18 @@ import {PostProducts} from '../services/PostProducts'
 import { GetProducts } from '../services/GetProducts';
 
 
+
 function ModalAdmin({ agregarProducto }) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
 
   const [Producto, setProducto] = useState('')
   const [Descripcion, setDescripcion] = useState('')
   const [Etiquetas, setEtiqueta] = useState('')
   const [Precio, setPrecio] = useState('')
   const [Imagen, setImagen] = useState(null)
-
+  const [products, setProducts] = useState([]);
 
   function cargaProducto(event) {
     setProducto(event.target.value)
@@ -43,6 +43,7 @@ function ModalAdmin({ agregarProducto }) {
     setPrecio(event.target.value)
   }
 
+
   function agregarProducto() {
     if (!Producto || !Descripcion || !Etiquetas || !Precio) {
       toast.warning('Por favor llenar todos los campos',{
@@ -55,32 +56,27 @@ function ModalAdmin({ agregarProducto }) {
         autoClose: 1000
         
     })
-    handleClose();
+    handleClose()
   }
 
-  const [products, setProducts] = useState([]);
 
   
-
-  useEffect(() => {
-
-  }, []);
 
 
   return (
     <>
 
-<Container fluid>
-<Row>
-<Nav className="flex-column">
-<Nav.Item>
-<Button variant="outline-primary" className="w-100 mb-2" onClick={handleShow}>
-<FontAwesomeIcon icon={faPlus} /> Añadir Productos
-</Button>
-</Nav.Item>
-</Nav>
-</Row>
-</Container>
+      <Container fluid>
+      <Row>
+      <Nav className="flex-column">
+      <Nav.Item>
+      <Button variant="outline-primary" className="w-100 mb-2" onClick={handleShow}>
+      <FontAwesomeIcon icon={faPlus} /> Añadir Productos
+      </Button>
+      </Nav.Item>
+      </Nav>
+      </Row>
+      </Container>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
@@ -91,7 +87,6 @@ function ModalAdmin({ agregarProducto }) {
 <div id='contenedorPadre'>  
 
 <div>
-<label htmlFor="Img">Producto</label>
         <input type="file"
         name="Imagen" 
         id=""
@@ -101,7 +96,7 @@ function ModalAdmin({ agregarProducto }) {
 </div>
 
 <div className='Productos'>
-        <label htmlFor="Producto">Producto</label>
+        
         <input type="text"
         name="Producto" 
         id=""
@@ -129,7 +124,7 @@ function ModalAdmin({ agregarProducto }) {
 </div>
 
 <div className='Precio'>
-        <label htmlFor="price">Precio:</label>
+        
         <input
           type="number"
           name="price"
@@ -138,7 +133,7 @@ function ModalAdmin({ agregarProducto }) {
         />
 </div>  
 </div> 
-</Modal.Body>
+        </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
