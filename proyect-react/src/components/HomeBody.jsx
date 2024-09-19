@@ -1,24 +1,28 @@
 import React from 'react'
-import Cards from './cards'
+import UserCards from './cards'
 import { Navigate, Link } from 'react-router-dom'
+import '../styles/HomeBody.css'
 
 
 
-export default function HomeBody() {
-
-
-
-
-
+const HomeBody = () => {
+  
   return (
-    <div>HomeBody
+    <>
+      <header className="bg-dark py-5">
+        <div className="container px-4 px-lg-5 my-5">
+          <div className="text-center text-white">
+            <h1 className="display-4 fw-bolder">Shop in style</h1>
+            <p className="lead fw-normal text-white-50 mb-0">
+              With this shop homepage template
+            </p>
+          </div>
+        </div>
+      </header>
 
-    <div>
-      <Cards/>
-    </div>
+      <UserCards/>
+    </>
+  );
+};
 
-    </div>
-  )
-}
-
-
+export default HomeBody;

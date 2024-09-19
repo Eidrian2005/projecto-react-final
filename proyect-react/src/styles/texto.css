@@ -1,0 +1,24 @@
+.textoinicio{
+    
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    line-height: 15px;
+}
+
+.textoP{
+    text-align: justify;
+    margin: 20px;
+    font-size: 15px !important;
+    color: #212529;;
+    letter-spacing: 0;
+}
+
+
+
+#Grupoice{
+    margin-top: 40px;
+    font-size: 35px;
+    margin-left: 85px;
+    font-weight: 300 !important;
+}
