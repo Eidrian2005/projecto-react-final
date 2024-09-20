@@ -22,3 +22,14 @@
     margin-left: 85px;
     font-weight: 300 !important;
 }
+
+
+.contenedorInputs{
+    display: flex;
+}
+
+.inputsConsulta{
+    display: flex;
+    flex-direction: row;
+}
+
