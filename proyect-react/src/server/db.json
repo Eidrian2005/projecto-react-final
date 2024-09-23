@@ -24,11 +24,25 @@
   ],
   "Productos": [
     {
-      "id": "d0c8",
-      "producto": "ijijijiji",
-      "descripcion": "jujujuju",
-      "etiqueta": "jajajajaaja",
-      "precio": "123141"
+      "id": "6c8b",
+      "producto": "1",
+      "descripcion": "1",
+      "etiqueta": "1",
+      "precio": "1"
+    },
+    {
+      "id": "b9ec",
+      "producto": "123",
+      "descripcion": "123",
+      "etiqueta": "12, Destacado",
+      "precio": "123"
+    },
+    {
+      "id": "0c39",
+      "producto": "funciona?",
+      "descripcion": "eqew",
+      "etiqueta": "aaa, Destacado",
+      "precio": "123"
     }
   ]
 }

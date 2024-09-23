@@ -100,6 +100,7 @@ function ModalAdmin({ agregarProducto }) {
         <input type="text"
         name="Producto" 
         id=""
+        placeholder='Nombre de producto'
         onChange={cargaProducto}
         />
 </div>

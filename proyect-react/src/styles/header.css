@@ -12,6 +12,11 @@ height: 110px;
 
 }
 
+#logo{
+    width: 70px;
+}
+
+
 .middleContainer{
 width: 400px;
 display: flex;

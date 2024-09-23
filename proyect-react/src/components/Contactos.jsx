@@ -44,7 +44,7 @@ export default function Contactos() {
                 Ponemos a disposición los siguientes canales donde puede
                 realizar cualquier consulta y solicitud:
               </p>
-              <p class="textoP">— Central telefónica: 20007720</p>
+              <p class="textoP">— Telefono: 20007720</p>
               <p class="textoP">— Correo electrónico: Example@gmail.com</p>
             </div>
           </div>

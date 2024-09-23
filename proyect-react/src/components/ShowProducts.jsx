@@ -43,32 +43,6 @@ export default function ShowProducts() {
   })
   }
 
-//   async function editarProducto(id) {
-//   try {
-//     const updatedProduct = {
-//       producto: Producto,
-//       descripcion: Descripcion,
-//       etiqueta: Etiquetas,
-//       precio: Precio,
-//       // Incluye cualquier otro campo necesario
-//     };
-
-//     await updateProducts(id, updatedProduct);
-//     toast.success('Producto actualizado exitosamente', {
-//       autoClose: 1000
-//     });
-//     fetchProductos(); // Vuelve a cargar la lista de productos
-//   } catch (error) {
-//     console.error('Error updating product:', error);
-//     toast.error('Error al actualizar el producto', {
-//       autoClose: 1000
-//     });
-//   }
-// }
-
-  
-
-
 
 
 loadProducts()

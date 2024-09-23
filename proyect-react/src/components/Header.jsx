@@ -2,13 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/Header.css";
 import Nav from "react-bootstrap/Nav";
+import imgLogo from '../img/Logo-sala-de-belleza.jpg'
 
 function Header() {
   return (
     <header>
       <div className="headermiddle">
         <div className="middleContainer">
-          <img src="" alt="Logo" id="logo" />
+          <img src={imgLogo} alt="Logo" id="logo" />
           <form action="">
             <input type="text" name="" id="buscador" />
           </form>
