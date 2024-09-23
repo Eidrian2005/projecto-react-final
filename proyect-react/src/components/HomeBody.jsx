@@ -37,7 +37,7 @@ const HomeBody = () => {
           </div>
           <div>
           <section className="py-5">
-    <div className="container px-4 px-lg-5 mt-5">
+    <div className="px-4 px-lg-5 mt-5">
       <div className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
         {filtradoDestacado.map((product) => (
           <div className="col mb-5" key={product.id}>
@@ -47,7 +47,7 @@ const HomeBody = () => {
                   Sale
                 </div>
               )}
-              <img className="card-img-top" src={imgLinea} alt={product.nombre} />
+              <img className="card-img-top" src={product.imagen} alt={product.nombre} />
               <div className="card-body p-4">
                 <div className="text-center">
                   <h5 className="fw-bolder">{product.producto}</h5>

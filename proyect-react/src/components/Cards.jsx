@@ -4,13 +4,14 @@ import React from 'react';
 import { GetProducts } from '../services/GetProducts';
 import ShowProducts from './ShowProducts';
 import { useEffect, useState, useCallback } from 'react';
-import imgLinea from '../img/linea-nutritiva.webp' 
+
 
 
 export default function UserCards() {
 
+ 
   const [productos, setProductos] = useState([]);
-  
+
   const loadProducts = useCallback(() => {
     const fetchProductos = async () => {
       try{
@@ -44,7 +45,7 @@ export default function UserCards() {
                   Sale
                 </div>
               )}
-              <img className="card-img-top" src={imgLinea} alt={product.nombre} />
+              <img className="card-img-top" src={product.imagen} alt={product.nombre} />
               <div className="card-body p-4">
                 <div className="text-center">
                   <h5 className="fw-bolder">{product.producto}</h5>
