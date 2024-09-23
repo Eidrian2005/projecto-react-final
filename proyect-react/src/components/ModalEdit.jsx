@@ -2,21 +2,15 @@ import { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
+import { faEdit } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
-import { Container, Row, Col, Nav } from "react-bootstrap";
 import { updateProducts } from "../services/PutProducts";
 
 function ModalEditar({ editarProducto, producto }) {
 
-    const [show, setShow] = useState(false);
-    const [productoData, setProductoData] = useState({});
+  const [show, setShow] = useState(false);
+  const [productoData, setProductoData] = useState(producto);
   
-    useEffect(() => {
-      setProductoData(producto);
-    }, []);
-  
-    // console.log(productoData);
   
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -31,7 +25,7 @@ function ModalEditar({ editarProducto, producto }) {
   
     const handleSubmit = async () => {
       try {
-        await updateProducts(productoData.id);
+        await updateProducts(productoData);
         toast.success('Producto actualizado exitosamente', { autoClose: 1000 });
         handleClose();
       } catch (error) {
@@ -44,7 +38,7 @@ function ModalEditar({ editarProducto, producto }) {
 
   return (
     <>
-      <Button variant="warning" className="p-1" onClick={() => handleShow(producto)}>
+      <Button variant="warning" className="p-1" onClick={handleShow}>
         <FontAwesomeIcon icon={faEdit} />
       </Button>
 

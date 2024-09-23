@@ -7,10 +7,8 @@ import { Row, Col } from 'react-bootstrap';
 import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { deleteProducts } from '../services/DeleteProducts';
-import imgLinea from '../img/linea-nutritiva.webp' 
 import { toast } from 'react-toastify';
 import '../styles/img.css'
-import { updateProducts } from '../services/PutProducts';
 import ModalEditar from './ModalEdit';
 
 
@@ -52,7 +50,7 @@ loadProducts()
         {productos.map((producto, index) => (
           <Col key={index} xs={12} sm={6} md={4} lg={3} className="mb-4">
             <Card>
-              <Card.Img variant="top" src={imgLinea} alt={producto.nombre} id='imagen'/>
+            <Card.Img variant="top" src={producto.imagen} alt={producto.nombre} id='imagen' />
               <Card.Body>
                 <Card.Title>Producto:{producto.producto}</Card.Title>
                 <Card.Text>Descrip:{producto.descripcion}</Card.Text>

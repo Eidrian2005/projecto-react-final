@@ -1,6 +1,7 @@
-async function PostProducts( producto,descripcion,etiqueta, precio) {
+async function PostProducts( imagen, producto,descripcion,etiqueta, precio) {
     try {
         const productsData = { 
+            imagen,
             producto,
             descripcion,
             etiqueta,

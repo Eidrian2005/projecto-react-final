@@ -3,11 +3,11 @@ import Button from 'react-bootstrap/Button';
 import { Container, Row, Col, Nav } from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { toast } from 'react-toastify';
 import {PostProducts} from '../services/PostProducts'
-import { GetProducts } from '../services/GetProducts';
+
 
 
 
@@ -51,7 +51,7 @@ function ModalAdmin({ agregarProducto }) {
       })
       
   } 
-    PostProducts(Producto, Descripcion, Etiquetas, Precio)
+    PostProducts(Imagen,Producto, Descripcion, Etiquetas, Precio)
     toast.success('Tarea agregada exitosamente',{
         autoClose: 1000
         
@@ -87,12 +87,23 @@ function ModalAdmin({ agregarProducto }) {
 <div id='contenedorPadre'>  
 
 <div>
-        <input type="file"
-        name="Imagen" 
-        id=""
-        value={Imagen}
-        onChange={cargaImagen}
-        /> 
+<input
+  type="file"
+  name="Imagen"
+  id=""
+  onChange={(event) => {
+    const file = event.target.files[0];
+    if (file) {
+      // Aquí puedes convertir el archivo a base64
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const base64Image = e.target.result;
+        setImagen(base64Image); // Actualiza el estado con la imagen en base64
+      };
+      reader.readAsDataURL(file);
+    }
+  }}
+/>
 </div>
 
 <div className='Productos'>
