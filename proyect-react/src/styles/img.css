@@ -1,9 +1,13 @@
-#imagen{
-    height: 70%!important;
+.card-img-container {
+    width: 235px;
+    height: 235px; 
+    overflow: hidden;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
 }
 
-#imagen img{
-    max-width: 235px!important;
-    height: 100%!important;
-    min-width: 235px !important;
+#imagen {
+    width: 100%;
+    object-fit: cover;
 }
