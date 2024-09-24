@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback} from 'react'
 import UserCards from './cards'
 import '../styles/HomeBody.css'
 import { GetProducts } from '../services/GetProducts'
-import imgLinea from '../img/linea-nutritiva.webp' 
+import Search from './Search'
 
 const HomeBody = () => {
   
@@ -31,6 +31,13 @@ const HomeBody = () => {
   return (
     <>
       <header className="featured-header">
+
+        <div>
+          <div>
+            <Search />
+          </div>
+        </div>
+
         <div>
           <div>
             <h1>Destacados</h1>
@@ -76,7 +83,7 @@ const HomeBody = () => {
       </header>
 
       <div className="featured-products">
-        {/* Render your featured products here */}
+        
         <UserCards />
       </div>
     </>

@@ -3,73 +3,116 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit } from "@fortawesome/free-solid-svg-icons";
-import React from "react";
 import { updateProducts } from "../services/PutProducts";
+import { toast } from "react-toastify";
 
-function ModalEditar({ editarProducto, producto }) {
-
+function ModalEditar({ producto }) {
   const [show, setShow] = useState(false);
-  const [productoData, setProductoData] = useState(producto);
-  
-  
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-  
-    const handleChange = (e) => {
-      const { name, value } = e.target; 
-      setProductoData((prevData) => ({
-        ...prevData,
-        [name]: value,
-      }));
-    };
-  
-    const handleSubmit = async () => {
-      try {
-        await updateProducts(productoData);
-        toast.success('Producto actualizado exitosamente', { autoClose: 1000 });
-        handleClose();
-      } catch (error) {
-        console.error('Error updating product:', error);
-        toast.error('Error al actualizar el producto', { autoClose: 1000 });
-      }
-    };
+  const [productoData, setProductoData] = useState({
+    producto: '',
+    descripcion: '',
+    etiqueta: '',
+    precio: 0,
+    imagen: '', // Estado para la imagen
+  });
 
+  const handleClose = () => setShow(false);
+  const handleShow = () => {
+    setShow(true);
+    setProductoData(producto); // Asegúrate de cargar los datos al abrir el modal
+  };
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setProductoData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setProductoData((prevData) => ({
+          ...prevData,
+          imagen: reader.result, // Establece la imagen en Base64
+        }));
+      };
+      reader.readAsDataURL(file); // Lee la imagen como Base64
+    }
+  };
+
+  const handleSubmit = async () => {
+    try {
+      await updateProducts(productoData);
+      toast.success('Producto actualizado exitosamente', { autoClose: 1000 });
+      handleClose();
+    } catch (error) {
+      console.error('Error updating product:', error);
+      toast.error('Error al actualizar el producto', { autoClose: 1000 });
+    }
+  };
+  
   return (
     <>
       <Button variant="warning" className="p-1" onClick={handleShow}>
         <FontAwesomeIcon icon={faEdit} />
       </Button>
 
-
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Editando producto</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            <div id="contenedorPadre">
-                <div>
-                  <input type="file" name="Imagen" />
-                </div>
-    
-                <div className="Productos">
-                  <input type="text" name="Producto" id="" value={productoData.producto}  onChange={handleChange}/>
-                </div>
-    
-                <div className="Descripcion">
-                  <textarea name="Descripcion" placeholder="Describa el Producto" value={productoData.descripcion} onChange={handleChange}>
-                  </textarea>
-                </div>
-    
-                <div className="Etiquetas">
-                  <input type="text" name="Etiqueta" placeholder="Añada etiqueta" value={productoData.etiqueta} onChange={handleChange} />
-                </div>
-    
-                <div className="Precio">
-                  <input type="number" name="Price" placeholder="Precio del producto"  value={productoData.precio}  onChange={handleChange}/>
-                </div>
-              </div>
+          <div id="contenedorPadre">
+            <div>
+              <input type="file" name="imagen" onChange={handleImageChange} />
+            </div>
+
+            <div className="Productos">
+              <input
+                type="text"
+                name="producto"
+                value={productoData.producto}
+                onChange={handleChange}
+                autoComplete="off"
+              />
+            </div>
+
+            <div className="Descripcion">
+              <textarea
+                name="descripcion"
+                placeholder="Describa el Producto"
+                value={productoData.descripcion}
+                onChange={handleChange}
+                autoComplete="off"
+              />
+            </div>
+
+            <div className="Etiquetas">
+              <input
+                type="text"
+                name="etiqueta"
+                placeholder="Añada etiqueta"
+                value={productoData.etiqueta}
+                onChange={handleChange}
+                autoComplete="off"
+              />
+            </div>
+
+            <div className="Precio">
+              <input
+                type="number"
+                name="precio"
+                placeholder="Precio del producto"
+                value={productoData.precio}
+                onChange={handleChange}
+                autoComplete="off"
+              />
+            </div>
+          </div>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>

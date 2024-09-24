@@ -1,19 +1,13 @@
-async function updateProducts(producto, descripcion,etiqueta,precio ,id) {
+async function updateProducts(productoData) {
     try {
     
-        const productsData = { 
-            producto,
-            descripcion,
-            etiqueta,
-            precio
-        
-        };
-        const response = await fetch("http://localhost:3001/Productos/"+id, {
+       
+        const response = await fetch(`http://localhost:3001/Productos/${productoData.id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(productsData)
+            body: JSON.stringify(productoData)
         });
 
     

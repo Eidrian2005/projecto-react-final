@@ -11,7 +11,11 @@ function Header() {
         <div className="middleContainer">
           <img src={imgLogo} alt="Logo" id="logo" />
           <form action="">
+
+            
             <input type="text" name="" id="buscador" />
+
+
           </form>
           <button>Iniciar Sesion</button>
         </div>
