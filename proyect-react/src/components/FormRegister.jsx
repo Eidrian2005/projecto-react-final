@@ -25,17 +25,10 @@ function FormRegister() {
 
     const cargar = (e) => {
         e.preventDefault()
-
-        
-
         console.log('Nombre:', usuario);
         console.log('Contraseña:', contrasenia);
-
         PostUsers(usuario, email, contrasenia)
-
         navigate("/Login")
-    
-    
 ;
 };
 

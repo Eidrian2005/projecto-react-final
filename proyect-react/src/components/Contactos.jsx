@@ -39,7 +39,7 @@ export default function Contactos() {
             <h1 id="Grupoice"></h1>
             <div class="textoinicio">
               <p class="textoP">
-              <h2 class="textoA">Contactos</h2>
+              <h2 class="textoA">Contactos para agendar citas</h2>
                 Ponemos a disposición donde puede
                 realizar cualquier consulta y solicitud:
               </p>
