@@ -61,6 +61,7 @@ return(
                     type="text" 
                     id="usuario1" 
                     value={usuario}
+                    placeholder='Ingrese su nombre'
                     onChange={cargaUsuario}
                     required/>
 
@@ -74,6 +75,7 @@ return(
                     type="email" 
                     id="Email1"
                     value={email}
+                    placeholder='Ingrese su correo electronico'
                     onChange={cargaEmail}
                     required />
 
@@ -88,6 +90,7 @@ return(
                     id="Password1" 
                     name="password" 
                     value={contrasenia}
+                    placeholder='Ingrese contraseña'
                     onChange={cargaContra}
                     required />
 

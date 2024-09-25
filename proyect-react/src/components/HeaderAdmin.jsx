@@ -23,14 +23,7 @@ function HeaderAdmin() {
           >
             <Nav.Link  as={Link} to="/">Home</Nav.Link>
           </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />  
-          </Form>
+          
         </Navbar.Collapse>
       </Container>
     </Navbar>

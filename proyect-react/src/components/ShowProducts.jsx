@@ -4,13 +4,13 @@ import Card from 'react-bootstrap/Card';
 import React, { useState, useEffect, useCallback } from 'react';
 import '../styles/productos.css';
 import { Row, Col } from 'react-bootstrap';
-import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { deleteProducts } from '../services/DeleteProducts';
 import { toast } from 'react-toastify';
 import '../styles/img.css'
 import ModalEditar from './ModalEdit';
-
+import Search from './Search';
 
 
 export default function ShowProducts() {  
@@ -45,6 +45,8 @@ export default function ShowProducts() {
 
 loadProducts()
   return (
+    <>
+    <Search />
     <div>
       <Row className="flex-wrap">
         {productos.map((producto, index) => (
@@ -67,6 +69,8 @@ loadProducts()
         ))}
       </Row>
     </div>
+    </>
+    
   );
 }
 

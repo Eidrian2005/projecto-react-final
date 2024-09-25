@@ -1,15 +1,11 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 import React from 'react';
 import { GetProducts } from '../services/GetProducts';
-import ShowProducts from './ShowProducts';
 import { useEffect, useState, useCallback } from 'react';
 
 
 
 export default function UserCards() {
 
- 
   const [productos, setProductos] = useState([]);
 
   const loadProducts = useCallback(() => {

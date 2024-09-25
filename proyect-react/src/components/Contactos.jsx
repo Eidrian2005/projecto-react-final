@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../components/Header";
-import Footer from "./Footer";
 import "../styles/texto.css";
 import { Form, Row, Col, Button } from 'react-bootstrap';
 import { useRef } from 'react';
@@ -41,11 +40,11 @@ export default function Contactos() {
             <div class="textoinicio">
               <p class="textoP">
               <h2 class="textoA">Contactos</h2>
-                Ponemos a disposición los siguientes canales donde puede
+                Ponemos a disposición donde puede
                 realizar cualquier consulta y solicitud:
               </p>
-              <p class="textoP">— Telefono: 20007720</p>
-              <p class="textoP">— Correo electrónico: Example@gmail.com</p>
+              <p class="textoP">— Telefono: 61504050  </p>
+              <p class="textoP">— Correo electrónico: Krochelle@gmail.com</p>
             </div>
           </div>
           <div>
@@ -56,7 +55,6 @@ export default function Contactos() {
         </section>
       </div></Col>
         <Col md={5}> <Form ref={form} onSubmit={sendEmail}>
-      {/* Fila con dos columnas */}
       <Row className="mb-3">
         <Col>
           <Form.Group controlId="formBasicEmail">
@@ -72,7 +70,6 @@ export default function Contactos() {
         </Col>
       </Row>
 
-      {/* Dos inputs adicionales debajo */}
       <Row className="mb-3">
         <Col>
           <Form.Group controlId="formBasicText1">
@@ -81,14 +78,11 @@ export default function Contactos() {
         </Col>
       </Row>
 
-      {/* Botón de envío */}
       <input type="submit" value="Send"  />
     </Form>
     
     </Col>
       </Row>
-     
-      <Footer />
     </>
   );
 }

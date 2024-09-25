@@ -13,13 +13,13 @@ function ModalEditar({ producto }) {
     descripcion: '',
     etiqueta: '',
     precio: 0,
-    imagen: '', // Estado para la imagen
+    imagen: '',
   });
 
   const handleClose = () => setShow(false);
   const handleShow = () => {
     setShow(true);
-    setProductoData(producto); // Asegúrate de cargar los datos al abrir el modal
+    setProductoData(producto); 
   };
 
   const handleChange = (e) => {
@@ -37,10 +37,10 @@ function ModalEditar({ producto }) {
       reader.onloadend = () => {
         setProductoData((prevData) => ({
           ...prevData,
-          imagen: reader.result, // Establece la imagen en Base64
+          imagen: reader.result, // Esto establece la imagen en base64
         }));
       };
-      reader.readAsDataURL(file); // Lee la imagen como Base64
+      reader.readAsDataURL(file); // ESto me lee la imagen como base64
     }
   };
 

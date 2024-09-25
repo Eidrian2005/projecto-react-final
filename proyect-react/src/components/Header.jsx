@@ -1,19 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import "../styles/Header.css";
 import Nav from "react-bootstrap/Nav";
 import imgLogo from '../img/Logo-sala-de-belleza.jpg'
 
 function Header() {
-  return (
+  const [estaAutenticado, setEsAutenticado] = useState(false);
+
+  useEffect(() => {
+    const autenticado = localStorage.getItem('Autenticado') === 'true';
+    setEsAutenticado(autenticado);
+  }, []);
+
+  const CerrarSesion = () => {
+    localStorage.removeItem('Autenticado'); 
+    setEsAutenticado(false)
+  };
+  
+
+  return (  
     <header >
       <div className="headermiddle">
         <div className="middleContainer">
           <img src={imgLogo} alt="Logo" id="logo" />
-          <form action="">
-            <input type="text" name="" id="buscador" />
-          </form>
-          <button>Iniciar Sesion</button>
+          {estaAutenticado ? (
+              <>
+                <button className="btnIniciar" onClick={CerrarSesion}>Cerrar Sesión</button>
+              </>
+            ) : (
+              <Link to="/Login">
+                <button className="btnIniciar">Iniciar Sesión</button>
+              </Link>
+            )}
         </div>
       </div>
 

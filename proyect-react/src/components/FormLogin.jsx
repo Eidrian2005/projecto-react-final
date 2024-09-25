@@ -61,9 +61,9 @@ return (
 
         <h2>Login</h2>
 
-        <div className="">
+        <div>
 
-            <form className="" onSubmit={cargar} id="registroCuenta">
+            <form onSubmit={cargar} id="registroCuenta">
 
                 <div className="form-grupo">
                     <label htmlFor="usuario1" className="form-label">Nombre:</label>
@@ -73,6 +73,7 @@ return (
                     type="text" 
                     id="usuario1" 
                     value={usuario}
+                    placeholder='Ingrese su nombre'
                     onChange={cargaUsuario}
                     required/>
 
@@ -86,6 +87,7 @@ return (
                     type="email" 
                     id="Email1"
                     value={email}
+                    placeholder='Ingrese su correo electronico'
                     onChange={cargaEmail}
                     required />
 
@@ -100,6 +102,7 @@ return (
                     id="Password1" 
                     name="password" 
                     value={contrasenia}
+                    placeholder='Ingrese contraseña'
                     onChange={cargaContra}
                     required />
 
